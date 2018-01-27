@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Testing
+﻿namespace Testing
 {
     class RaceCar : Car, IDriveable
     {
@@ -19,6 +13,11 @@ namespace Testing
             {
                 return false;
             }
+        }
+
+        public RaceCar(string Name) : base(Name)
+        {
+
         }
 
         public int Accelerate(int percent)

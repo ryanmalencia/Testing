@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Testing
 {
@@ -16,6 +13,23 @@ namespace Testing
         public Race()
         {
             Vehicles = new List<IDriveable>();
+        }
+
+        public bool AddRacer(IDriveable racer)
+        {
+            Vehicles.Add(racer);
+            return true;
+        }
+
+        public string PrintRacers()
+        {
+            string output = "";
+            foreach(IDriveable car in Vehicles)
+            {
+                output = output + car.GetName() + " ";
+                Console.WriteLine(car.GetName());
+            }
+            return output;
         }
     }
 }

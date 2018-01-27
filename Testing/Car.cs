@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Testing
+﻿namespace Testing
 {
     class Car : Vehicle
     {
+        protected string Name;
         public Car() : base()
         {
             Wheels = 4;
+        }
+
+        public Car(string Name)
+        {
+            this.Name = Name;
+        }
+
+        public string GetName()
+        {
+            return this.Name;
         }
     }
 }
